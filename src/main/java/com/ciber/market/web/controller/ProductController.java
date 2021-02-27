@@ -2,10 +2,7 @@ package com.ciber.market.web.controller;
 
 import com.ciber.market.domain.Product;
 import com.ciber.market.domain.service.ProductService;
-import io.swagger.annotations.ApiOperation;
-import io.swagger.annotations.ApiParam;
-import io.swagger.annotations.ApiResponse;
-import io.swagger.annotations.ApiResponses;
+import io.swagger.annotations.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -22,7 +19,7 @@ public class ProductController {
     private ProductService productService;
 
     @GetMapping("/all")
-    @ApiOperation("Get all ciber products")
+    @ApiOperation(value = "Get all ciber products", authorizations = { @Authorization(value = "JWT")})
     @ApiResponse(code = 200, message = "OK")
     public ResponseEntity<List<Product>> getAll() {
         return new ResponseEntity<>(productService.getAll(), HttpStatus.OK);
