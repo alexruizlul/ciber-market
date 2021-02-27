@@ -1,2 +1,2 @@
 # Ciber Market 🛒
-Mi primer proyecto en Java Spring, en el cual crearé una API que administra un super mercado, o en mi caso personalizado, un ciber.
+RESTful API created with Java Spring and deployed in Heroku that simulates the basic operations of a supermarket. I also implemented jwt's for better security. You can try the API by clicking [https://ciber-market.herokuapp.com/ciber-market/api/swagger-ui.html](here.)
